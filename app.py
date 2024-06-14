@@ -7,14 +7,17 @@ import config as cf
 def check_links(links):
     status_report = []
     for project_name, link in links:
-        try:
-            response = requests.get(link, timeout=10)
-            if response.status_code == 200:
-                status = "OK"
-            else:
-                status = f"Fail: HTTP {response.status_code}"
-        except requests.RequestException as e:
-            status = f"Fail: {e}"
+        if link == "n/a":
+            status = "Project not deployed"
+        else:
+            try:
+                response = requests.get(link, timeout=10)
+                if response.status_code == 200:
+                    status = "OK"
+                else:
+                    status = f"Fail: HTTP {response.status_code}"
+            except requests.RequestException as e:
+                status = f"Fail: {e}"
         
         status_report.append((project_name, link, status))
     return status_report
@@ -26,14 +29,31 @@ def generate_report(report):
 
 def status_report_page():
     st.title("Demo Links Status Report")
-
+    
     demo_links = [
-        ("Starzplay video enhancement POC", "https://videocrop.streamlit.app/"),
+      
         ("Starzplay video enhancement POC", "https://videocrop.streamlit.app/"),
         ("Github Bot", "https://gitbott.streamlit.app/"),
         ("FX Sentiment Analysis", "http://3.7.234.8:8000/"),
-        ("Financial ChatBot", "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI")
+        ("Financial ChatBot", "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI"),
+        ("Credit Scoring model", "n/a"),
+        ("Starzplay Multi-modal Search","n/a"),
+        ("Starzplay text translation","n/a"),
+        ("Trade Surveillence POC","n/a"),
+        ("Gemini Policy Bot","n/a"),
+        ("AI virtual Influencer","n/a"),
+        ("FAB demo","http://52.66.10.81:8002/"),
+        ("Yen Forex Sentiment Analysis","http://15.206.189.243:8503/"),
+        ("Sentiment Analysis on PDF Financial Document","http://15.206.189.243:8502/"),
+        ("Airline sentiment analysis","https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
+        ("Emaar AI Chatbot","https://huggingface.co/spaces/anang150296/Emaar-AI-chatbot"),
+        ("Org Structure Construction","http://13.232.58.176:8003/"),
+        ("QA_GenAI","http://13.232.58.176:8004/"),
+        ("Sentiment Demo","http://13.232.58.176:8001/"),
+        ("Sentiment Analysis on Company Earnings Call Transcript","http://3.108.236.232:8503/"),
+        ("Emaar Valet AI","n/a"),
     ]
+
 
     if st.button("Check Links"):
         with st.spinner('Checking links...'):
@@ -169,161 +189,159 @@ def main():
             "code_repo_link": "https://github.com/Gemini-Solutions/text-translation",
             "description": "POC to perform multilingual translations(more specific to MENA languages)",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "translation.webp")
-        },
-        {
-            "name": "Credit Card Transaction Anomaly",
-            "deployment_links": "n/a",
-            "creator": "Sushma Piraka",
-            "status": "n/a",
-            "code_repo_link": "https://github.com/chaitanyaraj53/credit-card-anomaly",
-            "description": "POC where we extracted historical data and trained a model to detect suspicious credit card transaction",
-            "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "credit-card.jfif")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i2.jpg")
         },
         {
             "name": "Trade Surveillence POC",
             "deployment_links": "n/a",
-            "creator": "Sushma Piraka",
+            "creator": "Nikhil Goyal",
             "status": "n/a",
-            "code_repo_link": "n/a",
-            "description": "POC to detect spoofing in market manipulation on synthetic data",
+            "code_repo_link": "https://github.com/Gemini-Solutions/trade-surveillence",
+            "description": "POC for detecting 2 (circular trading and spoofing) market manipulation techniques using synthetically generated data",
             "documentation_link": "https://docs.example.com/project1",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "trade.png")
         },
         {
-            "name": "FX-Sentiment-Analysis",
-            "deployment_links": "http://3.7.234.8:8000/",
-            "creator": "Debarghya Maity",
-            "status": "Not Running",
-            "code_repo_link": "https://github.com/Gemini-Solutions/fx-sentiment-analysis",
-            "description": "POC for Forex Analysis for JPY Currency",
-            "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "forex.jfif")
-        },
-        {
-            "name": "Broker-Sentiment-Analysis",
-            "deployment_links": "n/a",
-            "creator": "Nitish John Toppo",
-            "status": "n/a",
-            "code_repo_link": "n/a",
-            "description": "Build a demo for a solution that looks at tweets daily from different brokers and performs sentiment analysis",
-            "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "broker.jfif")
-        },
-        {
-            "name": "Financial ChatBot",
-            "deployment_links": "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI",
-            "creator": "Kritadhi Maity",
-            "status": "Running",
-            "code_repo_link": "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI",
-            "description": "Build a chatbot which feeds on financial context and will able to answer user's queries based on the context.",
-            "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "chatbot.webp")
-        },
-        {
             "name": "Gemini Policy Bot",
             "deployment_links": "n/a",
-            "creator": "Debarghya Maity/Saurav",
+            "creator": "Ankit Verma, Sushma Piraka",
             "status": "n/a",
-            "code_repo_link": "https://github.com/Gemini-Solutions/Flask_Server",
-            "description": "POC for integration of Gemini Policy with chatbot",
+            "code_repo_link": "n/a",
+            "description": "POC for multi-modal chatbot which will answer employees' queries on company policies",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "chatbot.webp")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i3.jpg")
         },
         {
             "name": "AI Virtual Influencer",
             "deployment_links": "n/a",
-            "creator": "Goutam Sharma",
+            "creator": "Ashutosh Singh",
             "status": "n/a",
             "code_repo_link": "n/a",
-            "description": "POC for building AI influencer that responds to given instructions.",
+            "description": "It is a basic POC to display images and caption those images",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "ai-influencer.jfif")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i4.jpg")
         },
         {
-            "name": "FAB demo",
+            "name": "FAB Demo",
             "deployment_links": "http://52.66.10.81:8002/",
-            "creator": "Debarghya Maity/ Prashant Solanki",
-            "status": "n/a",
+            "creator": "Nikhil Goyal",
+            "status": "Running",
             "code_repo_link": "n/a",
-            "description": "Extraction of entities from commercial banking documents and chatbot creation",
+            "description": "Real-time trend detection and sentiment analysis of MENA-based financial news",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "ai-influencer.jfif")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i5.jpg")
         },
         {
             "name": "Yen Forex Sentiment Analysis",
             "deployment_links": "http://15.206.189.243:8503/",
-            "creator": "Debarghya Maity/ Prashant Solanki",
-            "status": "n/a",
-            "code_repo_link": "n/a",
-            "description": "",
+            "creator": "Nikhil Goyal",
+            "status": "Running",
+            "code_repo_link": "https://github.com/Gemini-Solutions/yen-forex-sentiment-analysis",
+            "description": "POC to predict Forex movement based on sentiment from forex-based news articles",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "ai-influencer.jfif")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i6.jpg")
         },
         {
-            "name": "Sentiment Analysis on PDF Financial Document ",
+            "name": "Sentiment Analysis on PDF Financial Document",
             "deployment_links": "http://15.206.189.243:8502/",
-            "creator": "Debarghya Maity/ Prashant Solanki",
-            "status": "n/a",
-            "code_repo_link": "n/a",
-            "description": "",
+            "creator": "Nikhil Goyal",
+            "status": "Running",
+            "code_repo_link": "https://github.com/Gemini-Solutions/pdf-sentiment-analysis",
+            "description": "Extracts data from financial reports in pdf format, analyzes sentiment at sentence level, and identifies important keywords",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "ai-influencer.jfif")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "pdf.png")
         },
-
         {
-            "name": "Airline sentiment analysis",
-            "deployment_links": "",
-            "creator": "Nitish John Toppo",
-            "status": "n/a",
-            "code_repo_link": "https://colab.research.google.com/drive/1w06g3FS0dG1mfEf2sOy6mu5xpHh8zNeK?usp=sharing"   "https://github.com/NitishJT/us_airlines_sentiment_analysis",
-            "description": "",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/utkarsh_singh_geminisolutions_com/_layouts/15/Doc.aspx?sourcedoc=%7B87A7CC4B-9CEB-4BDD-8B89-559314F9AD6E%7D&file=SENTIMENT_ANALYSIS_US_AIRLINES.pptx&action=edit&mobileredirect=true",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "ai-influencer.jfif")
+            "name": "Airline Sentiment Analysis",
+            "deployment_links": "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app",
+            "creator": "Nikhil Goyal",
+            "status": "Running",
+            "code_repo_link": "https://github.com/Gemini-Solutions/airline-sentiment-analysis",
+            "description": "Trains model on tweets and identifies sentiments to specific US airlines",
+            "documentation_link": "https://docs.example.com/project1",
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i7.jpg")
         },
         {
             "name": "Emaar AI Chatbot",
             "deployment_links": "https://huggingface.co/spaces/anang150296/Emaar-AI-chatbot",
-            "creator": "",
+            "creator": "Anang Kumar",
+            "status": "Running",
+            "code_repo_link": "n/a",
+            "description": "Chatbot trained on emirates policies, contact information and other relevant information",
+            "documentation_link": "https://docs.example.com/project1",
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "chatbot.webp")
+        },
+        {
+            "name": "Organizational Structure Construction",
+            "deployment_links": "http://13.232.58.176:8003/",
+            "creator": "Ankit Verma",
+            "status": "Running",
+            "code_repo_link": "https://github.com/Gemini-Solutions/org-structure-construction",
+            "description": "Tool to construct org structure based on crawled employee information",
+            "documentation_link": "https://docs.example.com/project1",
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "org.png")
+        },
+        {
+            "name": "QA GenAI",
+            "deployment_links": "http://13.232.58.176:8004/",
+            "creator": "Ankit Verma",
+            "status": "Running",
+            "code_repo_link": "https://github.com/Gemini-Solutions/QA-GenAI",
+            "description": "Generative AI POC for QA bot",
+            "documentation_link": "https://docs.example.com/project1",
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "qa.png")
+        },
+        {
+            "name": "Sentiment Demo",
+            "deployment_links": "http://13.232.58.176:8001/",
+            "creator": "Ankit Verma",
+            "status": "Running",
+            "code_repo_link": "https://github.com/Gemini-Solutions/sentiment-demo",
+            "description": "Demo of sentiment analysis on financial news articles",
+            "documentation_link": "https://docs.example.com/project1",
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "sentiment.png")
+        },
+        {
+            "name": "Sentiment Analysis on Company Earnings Call Transcript",
+            "deployment_links": "http://3.108.236.232:8503/",
+            "creator": "Nikhil Goyal",
+            "status": "Running",
+            "code_repo_link": "https://github.com/Gemini-Solutions/earnings-call-sentiment",
+            "description": "Analyzes sentiment in earnings call transcripts of various companies",
+            "documentation_link": "https://docs.example.com/project1",
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "earnings.png")
+        },
+        {
+            "name": "Emaar Valet AI",
+            "deployment_links": "n/a",
+            "creator": "Anang Kumar",
             "status": "n/a",
             "code_repo_link": "n/a",
-            "description": "",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/utkarsh_singh_geminisolutions_com/Documents/POC%20Docs/EMAAR%20AI%20CHATBOT/Emaar%20IA%20chatbot.pptx?d=w0b9af1d417ac49b8a3c92a23bf206505&csf=1&web=1&e=oWxvl1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "ai-influencer.jfif")
-        }
-       
+            "description": "Tool to assist Emaar employees with valet services",
+            "documentation_link": "https://docs.example.com/project1",
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "valet.png")
+        },
     ]
 
-    # Filter projects based on search query
+    
     filtered_projects = [project for project in projects if search_query.lower() in project["name"].lower()]
 
-    # Iterate through the filtered projects and create boxes
-    num_cols = 4  # Number of columns to display
-    for i in range(0, len(filtered_projects), num_cols):
-        row_projects = filtered_projects[i:i+num_cols]
-        cols = st.columns(num_cols)
-        for col, project in zip(cols, row_projects):
-            with col:
-                with st.container():
-                    st.markdown('<div class="project-box">', unsafe_allow_html=True)
-                    project_box(
-                        project["name"],
-                        project["deployment_links"],
-                        project["creator"],
-                        project["status"],
-                        project["code_repo_link"],
-                        project["description"],
-                        project["documentation_link"],
-                        project["icon_path"]
-                    )
-                    st.markdown('</div>', unsafe_allow_html=True)
-
    
-
+    for project in filtered_projects:
+        with st.container():
+            project_box(
+                project["name"],
+                project["deployment_links"],
+                project["creator"],
+                project["status"],
+                project["code_repo_link"],
+                project["description"],
+                project["documentation_link"],
+                project["icon_path"]
+            )
 
 if __name__ == "__main__":
-    tab1, tab2 = st.tabs(["Repository", "Deployment Link Status Report"])
+    tab1, tab2 = st.tabs(["Project Repository","Project Status Report"])
 
     with tab1:
         main()
