@@ -1,8 +1,25 @@
 import os
 import streamlit as st
-import requests
+import requests  
 from tabulate import tabulate
 import config as cf
+
+st.markdown(
+    """
+    <style>
+    /* Target the expander and remove padding */
+    .streamlit-expander {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    /* Target the notification button and hide it */
+    .streamlit-expander .css-15dtf11 {
+        display: none !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 def check_links(links):
     status_report = []
@@ -24,14 +41,13 @@ def check_links(links):
 
 def generate_report(report):
     headers = ["Project Name", "Demo Link", "Status"]
-    table = tabulate(report, headers=headers, tablefmt="grid")
+    table = tabulate(report, headers=headers, tablefmt="html")
     return table
 
 def status_report_page():
     st.title("Demo Links Status Report")
     
     demo_links = [
-      
         ("Starzplay video enhancement POC", "https://videocrop.streamlit.app/"),
         ("Github Bot", "https://gitbott.streamlit.app/"),
         ("FX Sentiment Analysis", "http://3.7.234.8:8000/"),
@@ -54,44 +70,56 @@ def status_report_page():
         ("Emaar Valet AI","n/a"),
     ]
 
-
     if st.button("Check Links"):
         with st.spinner('Checking links...'):
             report = check_links(demo_links)
             report_table = generate_report(report)
-            st.text(report_table)
-
-
-            st.write("### Status Table")
-            st.table(report)
+            st.markdown(report_table, unsafe_allow_html=True)
     else:
         st.write("Click the button to check the status of the demo links.")
 
-def project_box(project_name, deployment_links, creator, status, code_repo_link, description, documentation_link, icon_path):
-    """
-    Function to create a box containing project information.
-    """
-   
-    st.image(icon_path, use_column_width=True)
-
-   
-    with st.expander(f"{project_name}"):
-        st.write(f"**Deployment Link:** {deployment_links}")
-        st.write(f"**Project Lead:** {creator}")
-        st.write(f"**Status:** {status}")
-        st.write(f"**Code Repository Link:** {code_repo_link}")
-        st.write(f"**Description:** {description}")
-        st.write(f"[Documentation]({documentation_link})")
-
 def main():
-   
+
+
+    if 'show_notification' not in st.session_state:
+        st.session_state.show_notification = True
+
     st.markdown(
         """
         <style>
         .project-box {
-            margin-bottom: 50px;
-      
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
         }
+        .notification {
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .notification-text {
+            flex-grow: 1; /* Allow text to expand */
+        }
+        .close-button {
+            cursor: pointer;
+            background-color: transparent;
+            border: 1px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        .project-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
         </style>
         <h1 style='text-align: center;'>Data Science Projects - Demo Repository</h1>
         """,
@@ -99,7 +127,22 @@ def main():
     )
     search_query = st.text_input("Search Projects")
 
+    # notification
+    if st.session_state.show_notification:
+        st.markdown("""
+            <div class='notification'>
+                <div class='notification-text'>
+                    Click on the Project Status Report tab to check the status of the Deployment Links.
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+        if st.button("Close Notification"):
+            st.session_state.show_notification = False
    
+
+
+
+
     projects = [
         {
             "name": "Credit Scoring Model",
@@ -189,7 +232,7 @@ def main():
             "code_repo_link": "https://github.com/Gemini-Solutions/text-translation",
             "description": "POC to perform multilingual translations(more specific to MENA languages)",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i2.jpg")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "trade.png")
         },
         {
             "name": "Trade Surveillence POC",
@@ -209,7 +252,7 @@ def main():
             "code_repo_link": "n/a",
             "description": "POC for multi-modal chatbot which will answer employees' queries on company policies",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i3.jpg")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "trade.png")
         },
         {
             "name": "AI Virtual Influencer",
@@ -219,7 +262,7 @@ def main():
             "code_repo_link": "n/a",
             "description": "It is a basic POC to display images and caption those images",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i4.jpg")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "trade.png")
         },
         {
             "name": "FAB Demo",
@@ -229,7 +272,7 @@ def main():
             "code_repo_link": "n/a",
             "description": "Real-time trend detection and sentiment analysis of MENA-based financial news",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i5.jpg")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "trade.png")
         },
         {
             "name": "Yen Forex Sentiment Analysis",
@@ -239,7 +282,7 @@ def main():
             "code_repo_link": "https://github.com/Gemini-Solutions/yen-forex-sentiment-analysis",
             "description": "POC to predict Forex movement based on sentiment from forex-based news articles",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i6.jpg")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "trade.png")
         },
         {
             "name": "Sentiment Analysis on PDF Financial Document",
@@ -249,7 +292,7 @@ def main():
             "code_repo_link": "https://github.com/Gemini-Solutions/pdf-sentiment-analysis",
             "description": "Extracts data from financial reports in pdf format, analyzes sentiment at sentence level, and identifies important keywords",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "pdf.png")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "trade.png")
         },
         {
             "name": "Airline Sentiment Analysis",
@@ -259,7 +302,7 @@ def main():
             "code_repo_link": "https://github.com/Gemini-Solutions/airline-sentiment-analysis",
             "description": "Trains model on tweets and identifies sentiments to specific US airlines",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i7.jpg")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "trade.png")
         },
         {
             "name": "Emaar AI Chatbot",
@@ -279,7 +322,7 @@ def main():
             "code_repo_link": "https://github.com/Gemini-Solutions/org-structure-construction",
             "description": "Tool to construct org structure based on crawled employee information",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "org.png")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "trade.png")
         },
         {
             "name": "QA GenAI",
@@ -289,7 +332,7 @@ def main():
             "code_repo_link": "https://github.com/Gemini-Solutions/QA-GenAI",
             "description": "Generative AI POC for QA bot",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "qa.png")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "trade.png")
         },
         {
             "name": "Sentiment Demo",
@@ -299,7 +342,7 @@ def main():
             "code_repo_link": "https://github.com/Gemini-Solutions/sentiment-demo",
             "description": "Demo of sentiment analysis on financial news articles",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "sentiment.png")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "trade.png")
         },
         {
             "name": "Sentiment Analysis on Company Earnings Call Transcript",
@@ -309,7 +352,7 @@ def main():
             "code_repo_link": "https://github.com/Gemini-Solutions/earnings-call-sentiment",
             "description": "Analyzes sentiment in earnings call transcripts of various companies",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "earnings.png")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "trade.png")
         },
         {
             "name": "Emaar Valet AI",
@@ -319,32 +362,48 @@ def main():
             "code_repo_link": "n/a",
             "description": "Tool to assist Emaar employees with valet services",
             "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "valet.png")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "trade.png")
         },
     ]
 
-    
     filtered_projects = [project for project in projects if search_query.lower() in project["name"].lower()]
 
-   
+    if not filtered_projects:
+        st.write("No projects found.")
+        return
+
+    cols = st.columns(4)
+    col_idx = 0
+
     for project in filtered_projects:
-        with st.container():
-            project_box(
-                project["name"],
-                project["deployment_links"],
-                project["creator"],
-                project["status"],
-                project["code_repo_link"],
-                project["description"],
-                project["documentation_link"],
-                project["icon_path"]
-            )
+        with cols[col_idx]:
+            st.markdown("<div class='project-column'>", unsafe_allow_html=True)
+            st.image(project["icon_path"], use_column_width=True)
+            with st.expander(project["name"]):
+                st.write(f"**Deployment Link:** {project['deployment_links']}")
+                st.write(f"**Project Lead:** {project['creator']}")
+                st.write(f"**Status:** {project['status']}")
+                st.write(f"**Code Repository Link:** {project['code_repo_link']}")
+                st.write(f"**Description:** {project['description']}")
+                st.write(f"[Documentation]({project['documentation_link']})")
+            st.markdown("</div>", unsafe_allow_html=True)
+        col_idx = (col_idx + 1) % 4
 
 if __name__ == "__main__":
-    tab1, tab2 = st.tabs(["Project Repository","Project Status Report"])
+    tab1, tab2 = st.tabs(["Project Repository", "Project Status Report"])
 
     with tab1:
         main()
 
+    
+      
     with tab2:
         status_report_page()
+
+   
+
+
+    
+
+
+   
