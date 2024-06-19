@@ -4,8 +4,6 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import logging
-from datetime import datetime
-import pytz
 
 # Setup logging
 logging.basicConfig(level=logging.DEBUG, filename='scheduler.log', filemode='a',
@@ -14,7 +12,6 @@ logging.basicConfig(level=logging.DEBUG, filename='scheduler.log', filemode='a',
 def check_links(links):
     status_report = []
     for project_name, project_lead, link in links:
-        logging.debug(f"Checking link for project: {project_name}")
         if link == "n/a":
             status = "Project not deployed"
         else:
@@ -33,13 +30,12 @@ def check_links(links):
 def generate_report(report):
     headers = ["Project Name", "Project Lead", "Demo Link", "Status"]
     table = tabulate(report, headers=headers, tablefmt="html")
-    logging.debug("Generated report table")
     return table
 
 def send_email(report_html):
-    sender_email = "Utkarsh.Singh@geminisolutions.com"
+    sender_email = "u992744@gmail.com"
     receiver_emails = ["Sanjana.Singh@geminisolutions.com"]  # Add your recipients
-    password = "Dell@123"  # Use your Outlook password or app-specific password if 2FA is enabled
+    password = "Utkarsh@0912"  # Use an app-specific password if 2FA is enabled
 
     msg = MIMEMultipart('alternative')
     msg['Subject'] = "Demo Links Status Report"
@@ -51,7 +47,7 @@ def send_email(report_html):
 
     logging.debug("Sending email")
     try:
-        server = smtplib.SMTP('smtp.office365.com', 587)
+        server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_emails, msg.as_string())
@@ -63,26 +59,23 @@ def send_email(report_html):
 def daily_task():
     logging.info("Starting daily task")
     demo_links = [
-        ("Starzplay video enhancement POC", "", "https://videocrop.streamlit.app/"),
-        ("Github Bot", "", "https://gitbott.streamlit.app/"),
-        ("FX Sentiment Analysis", "", "http://3.7.234.8:8000/"),
-        ("Financial ChatBot", "", "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI"),
-        ("Credit Scoring model", "", "n/a"),
-        ("Starzplay Multi-modal Search", "", "n/a"),
-        ("Starzplay text translation", "", "n/a"),
-        ("Trade Surveillence POC", "", "n/a"),
-        ("Gemini Policy Bot", "", "n/a"),
-        ("AI virtual Influencer", "", "n/a"),
-        ("FAB demo", "", "http://52.66.10.81:8002/"),
-        ("Yen Forex Sentiment Analysis", "", "http://15.206.189.243:8503/"),
-        ("Sentiment Analysis on PDF Financial Document", "", "http://15.206.189.243:8502/"),
-        ("Airline sentiment analysis", "", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
-        ("Emaar AI Chatbot", "", "https://huggingface.co/spaces/anang150296/Emaar-AI-chatbot"),
-        ("Org Structure Construction", "", "http://13.232.58.176:8003/"),
-        ("QA_GenAI", "", "http://13.232.58.176:8004/"),
-        ("Sentiment Demo", "", "http://13.232.58.176:8001/"),
-        ("Sentiment Analysis on Company Earnings Call Transcript", "", "http://3.108.236.232:8503/"),
-        ("Emaar Valet AI", "", "n/a"),
+        ("Starzplay video enhancement POC", "Aditya Singh", "https://videocrop.streamlit.app/"),
+        ("Github Bot", "Debarghya Maity", "https://gitbott.streamlit.app/"),        
+        ("Financial ChatBot", "Kritadhi Maity", "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI"),
+        ("Credit Scoring model", "Aditya Singh", "n/a"),
+        ("Starzplay Multi-modal Search", "Aditya Singh/Prashant Solanki", "n/a"),
+        ("Starzplay text translation", "Sushma Piraka", "n/a"),
+        ("Trade Surveillence POC", "Aditya Singh/Prashant Solanki", "n/a"),
+        ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
+        ("Facial Expression Manipulation", "Goutam Sharma", "https://huggingface.co/spaces/goutamsharma/facial-expression-manulplation"),
+        ("FAB demo", "Debarghya Maity", "http://52.66.10.81:8002/"),
+        ("Airline sentiment analysis", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
+        ("Emaar IA Chatbot", "Kritadhi Maity", "https://huggingface.co/spaces/anang150296/Emaar-AI-chatbot"),
+        ("Org Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
+        ("QA_GenAI", "Debarghya Maity", "http://13.232.58.176:8004/"),
+        ("Sentiment Demo", "Debarghya Maity", "http://13.232.58.176:8001/"),
+        ("FX Sentiment Analysis", "Debarghya Maity", "http://13.232.58.176:8002/"),
+        ("Emaar Valet AI", "Akshita Ranjan", "http://52.66.10.81:8001/"),
     ]
 
     report = check_links(demo_links)
@@ -90,7 +83,6 @@ def daily_task():
     send_email(report_table)
     logging.info("Daily task completed")
 
-# For immediate testing, call the task directly
-logging.info("Script started")
-daily_task()
-logging.info("Script finished")
+if __name__ == "__main__":
+    # For testing, call the daily_task function directly
+    daily_task()
