@@ -1,8 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\auto_email"
+    ""
   ],
-  "SelectedNode": "\\app.py",
+  "SelectedNode": "\\email_notification.py",
   "PreviewInSolutionExplorer": false
 }
