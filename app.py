@@ -47,8 +47,8 @@ def status_report_page():
     st.title("Demo Links Status Report")
     
     demo_links = [
-        ("Starzplay video Enhancement POC", "Aditya Singh", "https://videocrop.streamlit.app/"),
-        ("Github Bot", "Chaitanya Raj", "https://gitbott.streamlit.app/"),
+       
+      
         
         ("FinBot - A Financial ChatBot", "Kritadhi Maity", "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI"),
         ("Credit Scoring model", "Aditya Singh", "n/a"),
@@ -166,29 +166,9 @@ def main():
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Trade%20Guard.pptx?d=w575e23307d6348cea506ad14eb0e87f4&csf=1&web=1&e=mNtx0r",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "forex.jfif")
         },
-        {
-            "name": "Video Enhancement POC",
-            "deployment_links": "https://videocrop.streamlit.app/",
-            "creator": "Aditya Singh",
-            "status": "Not Running",
-            "code_repo_link": "https://github.com/AdityaSingh1574/Video-Enhancement-POC.git",
-            "description": "POC for removing in-built black borders from video and to implement 'Smart Zoom'",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/_VIDEO%20ENHANCEMENT.pptx?d=waf3ddcdb876643efa926d6a6905d7a00&csf=1&web=1&e=58vKjq",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "video.jfif")
-        },
+      
         
-        
-        {
-            "name": "Github Bot",
-            "deployment_links": "https://gitbott.streamlit.app/",
-            "creator": "Chaitanya Raj",
-            "status": "Running",
-            "code_repo_link": "https://github.com/chaitanyaraj53/gitbot",
-            "description": "Demo on Chatbot to communicate with github repos",
-            "documentation_link": "https://docs.example.com/project1",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "chatbot.webp")
-        },
-        
+    
         {
             "name": "Multi-modal Search",
             "deployment_links": "n/a",
