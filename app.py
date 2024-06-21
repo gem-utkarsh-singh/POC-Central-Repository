@@ -52,20 +52,20 @@ def status_report_page():
         
         ("FinBot - A Financial ChatBot", "Kritadhi Maity", "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI"),
         ("Credit Scoring model", "Aditya Singh", "n/a"),
-        ("Multi-modal Search", "Aditya Singh/Prashant Solanki", "n/a"),
-        ("LingoBot", "Sushma Piraka", "n/a"),
+        ("AI Recommendation Bot", "Aditya Singh/Prashant Solanki", "n/a"),
+        ("Language Translation Bot", "Sushma Piraka", "n/a"),
         ("Trade Guard", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
-        ("Facial Expression Manipulation", "Goutam Sharma", "https://huggingface.co/spaces/goutamsharma/facial-expression-manulplation"),
+       
         ("Document Information Retrieval Bot", "Debarghya Maity", "http://52.66.10.81:8002/"),
        
        
-        ("Sentiment Insights", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
+        ("Document Sentiment Insights", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
         ("Document Intelligence Bot", "Kritadhi Maity", "https://huggingface.co/spaces/anang150296/Emaar-AI-chatbot"),
-        ("Org Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
+        ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
         ("QA_GenAI", "Debarghya Maity", "http://13.232.58.176:8004/"),
-        ("Sentiment Demo", "Debarghya Maity", "http://13.232.58.176:8001/"),
-        ("Forex Trends", "Debarghya Maity", "http://13.232.58.176:8002/"),
+        ("Customer Review Sentiment Analysis", "Debarghya Maity", "http://13.232.58.176:8001/"),
+        ("Forex Trends", "Kritadhi Maity", "http://13.232.58.176:8002/"),
        
         ("Park Easy", "Akshita Ranjan", "http://52.66.10.81:8001/"),
     ]
@@ -153,7 +153,7 @@ def main():
             "status": "n/a",
             "code_repo_link": "https://drive.google.com/file/d/151v8tZW1mGXcthHeUgshzH2cDsdxq-DR/view?usp=sharing",
             "description": "Model classifies users into either 'Good' or 'Bad' using features with 93% accuracy",
-            "documentation_link": "https://docs.example.com/project1",
+            "documentation_link": "n/a",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "credit-scoring.jfif")
         },
         {
@@ -170,21 +170,21 @@ def main():
         
     
         {
-            "name": "Multi-modal Search",
+            "name": "AI Recommendation Bot",
             "deployment_links": "n/a",
             "creator": "Saurav Anand, Aditya Singh",
             "status": "n/a",
-            "code_repo_link": "https://github.com/Gemini-Solutions/multi-modal-search",
-            "description": "POC when given an image as input returns the most relevant videos and when some text is given as input it will give the relevant dataframe",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/_MULTI-MODAL.pptx?d=w03ae50b9cce141a781b71f84466236d7&csf=1&web=1&e=ciElNO",
+            "code_repo_link": "n/a",
+            "description": "Recommendation system based on text, image and video input created using multi-model architecture",
+            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/AI%20Recommendation%20Bot.pptx?d=wa137bca0b6e34091a304463df50bf13e&csf=1&web=1&e=RGDmbQ",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "i1.jpg")
         },
         {
-            "name": "LingoBot",
+            "name": "Language Translation Bot",
             "deployment_links": "n/a",
             "creator": "Sushma Piraka",
             "status": "n/a",
-            "code_repo_link": "https://github.com/Gemini-Solutions/text-translation",
+            "code_repo_link": "n/a",
             "description": "POC to perform multilingual translations(more specific to MENA languages)",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/LingoBot.pptx?d=w881811c36097402ab3b0c15f89462b81&csf=1&web=1&e=3vjqm6",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "translation.webp")
@@ -197,7 +197,7 @@ def main():
             "status": "n/a",
             "code_repo_link": "https://github.com/prashantsolanki975/PolicyGemChat",
             "description": "POC for multi-modal chatbot which will answer employees' queries on company policies",
-            "documentation_link": "https://docs.example.com/project1",
+            "documentation_link": "n/a",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "policy.webp")
         },
         
@@ -207,28 +207,28 @@ def main():
             "creator": "Debarghya Maity",
             "status": "Running",
             "code_repo_link": "n/a",
-            "description": "Real-time trend detection and sentiment analysis of MENA-based financial news",
-            "documentation_link": "https://docs.example.com/project1",
+            "description": "Retrieve important key matrices from the documents as per client usecase and document type",
+            "documentation_link": "n/a",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "documentRetrieval.png")
         },
         
         {
-            "name": "Sentiment Insights",
+            "name": "Customer Review Sentiment Analysis",
             "deployment_links": "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app",
             "creator": "Nitish John Toppo",
             "status": "Running",
-            "code_repo_link": "https://github.com/Gemini-Solutions/airline-sentiment-analysis",
+            "code_repo_link": "n/a",
             "description": "Trains model on tweets and identifies sentiments to specific US airlines",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/SENTIMENT%20INSIGHT.pptx?d=wa5b5259586e547178c0c1f0e2b1c7de1&csf=1&web=1&e=KJ0kIO",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "sentimentInsights.svg")
         },
         {
             "name": "Document Intelligence Bot",
-            "deployment_links": "https://huggingface.co/spaces/anang150296/Emaar-AI-chatbot",
-            "creator": "Debarghya Maity",
+            "deployment_links": "https://huggingface.co/spaces/maitykritadhi/Document_Intelligence_Bot",
+            "creator": "Kritadhi Maity",
             "status": "Running",
             "code_repo_link": "n/a",
-            "description": "n/a",
+            "description": "Retrieve important key matrices from the documents as per client use case and document type.",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Document%20Intelligence%20Bot.pptx?d=w7cc81d1f43bc40edb56e0597ec3bc2d3&csf=1&web=1&e=LXpO7T",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "intelligence.jpg")
         },
@@ -237,9 +237,9 @@ def main():
             "deployment_links": "http://13.232.58.176:8003/",
             "creator": "Debarghya Maity",
             "status": "Running",
-            "code_repo_link": "https://github.com/Gemini-Solutions/org-structure-construction",
-            "description": "Tool to construct org structure based on crawled employee information",
-            "documentation_link": "https://docs.example.com/project1",
+            "code_repo_link": "n/a",
+            "description": "To create an organizational structure based on the information about owners/ share holders and the companies that they are linked to.",
+            "documentation_link": "n/a",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "org.jpeg")
         },
         {
@@ -247,18 +247,18 @@ def main():
             "deployment_links": "http://13.232.58.176:8004/",
             "creator": "Debarghya Maity",
             "status": "Running",
-            "code_repo_link": "https://github.com/Gemini-Solutions/QA-GenAI",
-            "description": "Generative AI POC for QA bot",
-            "documentation_link": "https://docs.example.com/project1",
+            "code_repo_link": "n/a",
+            "description": "Scrapes and parses the HTML (of the input URL) and extracts important features. Creates test cases for the identified features.",
+            "documentation_link": "n/a",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "genai.jfif")
         },
         {
-            "name": "Sentiment Demo",
+            "name": "Document Sentiment Insights",
             "deployment_links": "http://13.232.58.176:8001/",
             "creator": "Debarghya Maity",
             "status": "Running",
-            "code_repo_link": "https://github.com/Gemini-Solutions/sentiment-demo",
-            "description": "n/a",
+            "code_repo_link": "n/a",
+            "description": "Analyzes the ECT report (earnings call transcript) and  extracts important topics discussed. Gives the information on what is said on each topic and generates a sentiment report for each topic.",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/SENTIMENT%20DEMO.pptx?d=w31846e216824499bbe64d6636a57e15c&csf=1&web=1&e=7BURmL",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "sentimentInsights.svg")
         },
@@ -266,10 +266,10 @@ def main():
         {
             "name": "Park Easy",
             "deployment_links": "http://52.66.10.81:8001/",
-            "creator": "Debarghya Maity",
-            "status": "n/a",
+            "creator": "Akshita Ranjan",
+            "status": "Running",
             "code_repo_link": "n/a",
-            "description": "Tn/a",
+            "description": "Extract features of the Car such as model, color, registration number, defects and scratches from the input car image using image processing models.",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/PARK%20EASY.pptx?d=wfc683bd65193407a9263d13878e4022d&csf=1&web=1&e=csv5hq",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "valet-keys.jpg")
         },
@@ -277,9 +277,9 @@ def main():
             "name": "FinBot - A Financial ChatBot",
             "deployment_links": "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI",
             "creator": "Kritadhi Maity",
-            "status": "n/a",
+            "status": "Running",
             "code_repo_link": "n/a",
-            "description": "n/a",
+            "description": "Analyzes the financial reports of different companies and provide a QA functionality where user can query the bot to get different financial metrics information from documents and perform comparative analysis based on multiple financial reports.",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:w:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Financial%20Chatbot%20documentation.docx?d=wb650909fbb9d4c7988422c47bb385ee3&csf=1&web=1&e=9LxapJ",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "Chatbots-for-financial-services.jpg")
         },
@@ -287,9 +287,9 @@ def main():
             "name": "Forex Trends",
             "deployment_links": "http://13.232.58.176:8002/",
             "creator": "Kritadhi Maity",
-            "status": "n/a",
+            "status": "Running",
             "code_repo_link": "n/a",
-            "description": "n/a",
+            "description": "Bot analyzes online articles and reports to provide daily summarized and latest updates in the Forex market to the user. It also provides dashboard where user can compare and track the general sentiments and trends in the market. ",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/FOREX%20TRENDS.pptx?d=w73fedaa4c39d4877bdad5859889e6484&csf=1&web=1&e=kgLmpM",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "forex.jfif")
         },
@@ -315,7 +315,7 @@ def main():
                 st.write(f"**Status:** {project['status']}")
                 st.write(f"**Code Repository Link:** {project['code_repo_link']}")
                 st.write(f"**Description:** {project['description']}")
-                st.write(f"[Documentation]({project['documentation_link']})")
+                st.write(f"**Document:** {project['documentation_link']}")
             st.markdown("</div>", unsafe_allow_html=True)
         col_idx = (col_idx + 1) % 4
 
