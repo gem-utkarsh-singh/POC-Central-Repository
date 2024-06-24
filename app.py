@@ -208,7 +208,7 @@ def main():
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "Retrieve important key matrices from the documents as per client usecase and document type",
-            "documentation_link": "n/a",
+            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Document%20Information%20Retrieval%20Bot?csf=1&web=1&e=0cj0xZ",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "documentRetrieval.png")
         },
         
@@ -229,7 +229,7 @@ def main():
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "Retrieve important key matrices from the documents as per client use case and document type.",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Document%20Intelligence%20Bot.pptx?d=w7cc81d1f43bc40edb56e0597ec3bc2d3&csf=1&web=1&e=LXpO7T",
+            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Document%20Intelligence%20Bot?csf=1&web=1&e=W8B5ZN",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "intelligence.jpg")
         },
         {
@@ -239,7 +239,7 @@ def main():
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "To create an organizational structure based on the information about owners/ share holders and the companies that they are linked to.",
-            "documentation_link": "n/a",
+            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Organizational%20Structure%20Construction?csf=1&web=1&e=IwfJgY",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "org.jpeg")
         },
         {
