@@ -94,14 +94,19 @@ def daily_task():
         ("Language Translation Bot", "Sushma Piraka", "n/a"),
         ("Trade Guard", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
+       
         ("Document Information Retrieval Bot", "Debarghya Maity", "http://52.66.10.81:8002/"),
+       
+       
         ("Document Sentiment Insights", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
         ("Document Intelligence Bot", "Kritadhi Maity", "https://huggingface.co/spaces/anang150296/Emaar-AI-chatbot"),
         ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
-        ("QA_GenAI", "Debarghya Maity", "http://13.232.58.176:8004/"),
+        ("WebInspect AI", "Debarghya Maity", "http://13.232.58.176:8004/"),
         ("Customer Review Sentiment Analysis", "Debarghya Maity", "http://13.232.58.176:8001/"),
         ("Forex Trends", "Kritadhi Maity", "http://13.232.58.176:8002/"),
+       
         ("Park Easy", "Akshita Ranjan", "http://52.66.10.81:8001/"),
+
     ]
 
     report = check_links(demo_links)

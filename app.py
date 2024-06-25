@@ -63,7 +63,7 @@ def status_report_page():
         ("Document Sentiment Insights", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
         ("Document Intelligence Bot", "Kritadhi Maity", "https://huggingface.co/spaces/anang150296/Emaar-AI-chatbot"),
         ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
-        ("QA_GenAI", "Debarghya Maity", "http://13.232.58.176:8004/"),
+        ("WebInspect AI", "Debarghya Maity", "http://13.232.58.176:8004/"),
         ("Customer Review Sentiment Analysis", "Debarghya Maity", "http://13.232.58.176:8001/"),
         ("Forex Trends", "Kritadhi Maity", "http://13.232.58.176:8002/"),
        
@@ -208,7 +208,7 @@ def main():
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "Retrieve important key matrices from the documents as per client usecase and document type",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Document%20Information%20Retrieval%20Bot?csf=1&web=1&e=0cj0xZ",
+            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Document%20Information%20Retrieval%20Bot?csf=1&web=1&e=ubGaEl",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "documentRetrieval.png")
         },
         
@@ -229,7 +229,7 @@ def main():
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "Retrieve important key matrices from the documents as per client use case and document type.",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Document%20Intelligence%20Bot?csf=1&web=1&e=W8B5ZN",
+            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Document%20Intelligence%20Bot?csf=1&web=1&e=ECkTpV",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "intelligence.jpg")
         },
         {
@@ -239,17 +239,17 @@ def main():
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "To create an organizational structure based on the information about owners/ share holders and the companies that they are linked to.",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Organizational%20Structure%20Construction?csf=1&web=1&e=IwfJgY",
+            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Organizational%20Structure%20Construction?csf=1&web=1&e=h5MkFK",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "org.jpeg")
         },
         {
-            "name": "QA GenAI",
+            "name": "WebInspect AI",
             "deployment_links": "http://13.232.58.176:8004/",
             "creator": "Debarghya Maity",
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "Scrapes and parses the HTML (of the input URL) and extracts important features. Creates test cases for the identified features.",
-            "documentation_link": "n/a",
+            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/WebInspect%20AI?csf=1&web=1&e=7vqWff",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "genai.jfif")
         },
         {
@@ -259,7 +259,7 @@ def main():
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "Analyzes the ECT report (earnings call transcript) and  extracts important topics discussed. Gives the information on what is said on each topic and generates a sentiment report for each topic.",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/SENTIMENT%20DEMO.pptx?d=w31846e216824499bbe64d6636a57e15c&csf=1&web=1&e=7BURmL",
+            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Document%20Sentiment%20Insights?csf=1&web=1&e=nCyFuu",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "sentimentInsights.svg")
         },
         
@@ -270,7 +270,7 @@ def main():
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "Extract features of the Car such as model, color, registration number, defects and scratches from the input car image using image processing models.",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/PARK%20EASY.pptx?d=wfc683bd65193407a9263d13878e4022d&csf=1&web=1&e=csv5hq",
+            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Park%20Easy?csf=1&web=1&e=jeD3yX",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "valet-keys.jpg")
         },
         {
@@ -278,7 +278,7 @@ def main():
             "deployment_links": "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI",
             "creator": "Kritadhi Maity",
             "status": "Running",
-            "code_repo_link": "n/a",
+            "code_repo_link": "https://huggingface.co/spaces/maitykritadhi/Groq_Financial_Chatbot_Streamlit_UI/tree/main",
             "description": "Analyzes the financial reports of different companies and provide a QA functionality where user can query the bot to get different financial metrics information from documents and perform comparative analysis based on multiple financial reports.",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:w:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Financial%20Chatbot%20documentation.docx?d=wb650909fbb9d4c7988422c47bb385ee3&csf=1&web=1&e=9LxapJ",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "Chatbots-for-financial-services.jpg")
@@ -290,7 +290,7 @@ def main():
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "Bot analyzes online articles and reports to provide daily summarized and latest updates in the Forex market to the user. It also provides dashboard where user can compare and track the general sentiments and trends in the market. ",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/FOREX%20TRENDS.pptx?d=w73fedaa4c39d4877bdad5859889e6484&csf=1&web=1&e=kgLmpM",
+            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/FOREX%20TRENDS.pptx?d=w73fedaa4c39d4877bdad5859889e6484&csf=1&web=1&e=mmKchF",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "forex.jfif")
         },
        
