@@ -40,8 +40,37 @@ def check_links(links):
 
 def generate_report(report):
     headers = ["Project Name", "Project Lead", "Demo Link", "Status"]
-    table = tabulate(report, headers=headers, tablefmt="html")
-    return table
+    report_with_links = [
+        (project_name, project_lead, f'<a href="{link}">{link}</a>' if link != "n/a" else link, status) 
+        for project_name, project_lead, link, status in report
+    ]
+    
+    table_html = f"""
+    <table style="width:100%; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th style="border: 1px solid black; padding: 8px; background-color: #f2f2f2;">Project Name</th>
+                <th style="border: 1px solid black; padding: 8px; background-color: #f2f2f2;">Project Lead</th>
+                <th style="border: 1px solid black; padding: 8px; background-color: #f2f2f2;">Demo Link</th>
+                <th style="border: 1px solid black; padding: 8px; background-color: #f2f2f2;">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+    """
+    
+    for row in report_with_links:
+        table_html += "<tr>"
+        for cell in row:
+            table_html += f'<td style="border: 1px solid black; padding: 8px;">{cell}</td>'
+        table_html += "</tr>"
+    
+    table_html += """
+        </tbody>
+    </table>
+    """
+    
+    return table_html
+
 
 def status_report_page():
     st.title("Demo Links Status Report")
@@ -61,7 +90,7 @@ def status_report_page():
        
        
         ("Document Sentiment Insights", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
-        ("Document Intelligence Bot", "Kritadhi Maity", "https://huggingface.co/spaces/anang150296/Emaar-AI-chatbot"),
+        ("Document Intelligence Bot", "Kritadhi Maity", "https://huggingface.co/spaces/maitykritadhi/Document_Intelligence_Bot"),
         ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
         ("WebInspect AI", "Debarghya Maity", "http://13.232.58.176:8004/"),
         ("Customer Review Sentiment Analysis", "Debarghya Maity", "http://13.232.58.176:8001/"),
