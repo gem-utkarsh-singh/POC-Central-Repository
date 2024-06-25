@@ -90,7 +90,7 @@ def status_report_page():
        
        
         ("Document Sentiment Insights", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
-        ("Document Intelligence Bot", "Kritadhi Maity", "https://huggingface.co/spaces/maitykritadhi/Document_Intelligence_Bot"),
+        ("Document Intelligence Bot", "Kritadhi Maity", "https://huggingface.co/spaces/anang150296/Emaar-AI-chatbot"),
         ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
         ("WebInspect AI", "Debarghya Maity", "http://13.232.58.176:8004/"),
         ("Customer Review Sentiment Analysis", "Debarghya Maity", "http://13.232.58.176:8001/"),
@@ -183,7 +183,8 @@ def main():
             "code_repo_link": "https://drive.google.com/file/d/151v8tZW1mGXcthHeUgshzH2cDsdxq-DR/view?usp=sharing",
             "description": "Model classifies users into either 'Good' or 'Bad' using features with 93% accuracy",
             "documentation_link": "n/a",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "credit-scoring.jfif")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "credit-scoring.jfif"),
+	        "sample_document": "n/a"
         },
         {
             "name": "Trade Guard",
@@ -193,7 +194,8 @@ def main():
             "code_repo_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/personal/aditya_singh1_geminisolutions_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Faditya%5Fsingh1%5Fgeminisolutions%5Fcom%2FDocuments%2FTrade%2DSurveillance%2DProject&ga=1",
             "description": "POC for detecting 2 (circular trading and spoofing) market manipulation techniques using synthetically generated data",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Trade%20Guard.pptx?d=w575e23307d6348cea506ad14eb0e87f4&csf=1&web=1&e=mNtx0r",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "forex.jfif")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "forex.jfif"),
+	        "sample_document": "n/a"
         },
       
         
@@ -206,7 +208,8 @@ def main():
             "code_repo_link": "n/a",
             "description": "Recommendation system based on text, image and video input created using multi-model architecture",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/AI%20Recommendation%20Bot.pptx?d=wa137bca0b6e34091a304463df50bf13e&csf=1&web=1&e=RGDmbQ",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i1.jpg")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i1.jpg"),
+	        "sample_document": "n/a"
         },
         {
             "name": "Language Translation Bot",
@@ -216,7 +219,8 @@ def main():
             "code_repo_link": "n/a",
             "description": "POC to perform multilingual translations(more specific to MENA languages)",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/LingoBot.pptx?d=w881811c36097402ab3b0c15f89462b81&csf=1&web=1&e=3vjqm6",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "translation.webp")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "translation.webp"),
+	        "sample_document": "n/a"
         },
         
         {
@@ -227,7 +231,8 @@ def main():
             "code_repo_link": "https://github.com/prashantsolanki975/PolicyGemChat",
             "description": "POC for multi-modal chatbot which will answer employees' queries on company policies",
             "documentation_link": "n/a",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "policy.webp")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "policy.webp"),
+	        "sample_document": "n/a"
         },
         
         {
@@ -237,8 +242,9 @@ def main():
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "Retrieve important key matrices from the documents as per client usecase and document type",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Document%20Information%20Retrieval%20Bot?csf=1&web=1&e=ubGaEl",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "documentRetrieval.png")
+            "documentation_link": "n/a",
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "documentRetrieval.png"),
+	        "sample_document": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/SAMPLE%20DOCUMENTS/Document%20Information%20Retrieval%20Bot?csf=1&web=1&e=wmDgEd"
         },
         
         {
@@ -249,7 +255,8 @@ def main():
             "code_repo_link": "n/a",
             "description": "Trains model on tweets and identifies sentiments to specific US airlines",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/SENTIMENT%20INSIGHT.pptx?d=wa5b5259586e547178c0c1f0e2b1c7de1&csf=1&web=1&e=KJ0kIO",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "sentimentInsights.svg")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "sentimentInsights.svg"),
+	        "sample_document": "n/a"
         },
         {
             "name": "Document Intelligence Bot",
@@ -259,7 +266,8 @@ def main():
             "code_repo_link": "n/a",
             "description": "Retrieve important key matrices from the documents as per client use case and document type.",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Document%20Intelligence%20Bot?csf=1&web=1&e=ECkTpV",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "intelligence.jpg")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "intelligence.jpg"),
+	        "sample_document": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/SAMPLE%20DOCUMENTS/Document%20Intelligence%20Bot?csf=1&web=1&e=o3v3F2"
         },
         {
             "name": "Organizational Structure Construction",
@@ -268,8 +276,9 @@ def main():
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "To create an organizational structure based on the information about owners/ share holders and the companies that they are linked to.",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Organizational%20Structure%20Construction?csf=1&web=1&e=h5MkFK",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "org.jpeg")
+            "documentation_link": "n/a",
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "org.jpeg"),
+	        "sample_document": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/SAMPLE%20DOCUMENTS/Organizational%20Structure%20Construction?csf=1&web=1&e=7TJorL"
         },
         {
             "name": "WebInspect AI",
@@ -278,8 +287,9 @@ def main():
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "Scrapes and parses the HTML (of the input URL) and extracts important features. Creates test cases for the identified features.",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/WebInspect%20AI?csf=1&web=1&e=7vqWff",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "genai.jfif")
+            "documentation_link": "n/a",
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "genai.jfif"),
+	        "sample_document": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/SAMPLE%20DOCUMENTS/WebInspect%20AI?csf=1&web=1&e=0hntxl"
         },
         {
             "name": "Document Sentiment Insights",
@@ -289,7 +299,8 @@ def main():
             "code_repo_link": "n/a",
             "description": "Analyzes the ECT report (earnings call transcript) and  extracts important topics discussed. Gives the information on what is said on each topic and generates a sentiment report for each topic.",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Document%20Sentiment%20Insights?csf=1&web=1&e=nCyFuu",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "sentimentInsights.svg")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "sentimentInsights.svg"),
+	        "sample_document": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/SAMPLE%20DOCUMENTS/Document%20Sentiment%20Insights?csf=1&web=1&e=keuuGz"
         },
         
         {
@@ -300,7 +311,8 @@ def main():
             "code_repo_link": "n/a",
             "description": "Extract features of the Car such as model, color, registration number, defects and scratches from the input car image using image processing models.",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Park%20Easy?csf=1&web=1&e=jeD3yX",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "valet-keys.jpg")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "valet-keys.jpg"),
+	        "sample_document": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/SAMPLE%20DOCUMENTS/PARK%20EASY?csf=1&web=1&e=b9ILoH"
         },
         {
             "name": "FinBot - A Financial ChatBot",
@@ -310,7 +322,8 @@ def main():
             "code_repo_link": "https://huggingface.co/spaces/maitykritadhi/Groq_Financial_Chatbot_Streamlit_UI/tree/main",
             "description": "Analyzes the financial reports of different companies and provide a QA functionality where user can query the bot to get different financial metrics information from documents and perform comparative analysis based on multiple financial reports.",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:w:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Financial%20Chatbot%20documentation.docx?d=wb650909fbb9d4c7988422c47bb385ee3&csf=1&web=1&e=9LxapJ",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "Chatbots-for-financial-services.jpg")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "Chatbots-for-financial-services.jpg"),
+	        "sample_document": "n/a"
         },
         {
             "name": "Forex Trends",
@@ -320,13 +333,14 @@ def main():
             "code_repo_link": "n/a",
             "description": "Bot analyzes online articles and reports to provide daily summarized and latest updates in the Forex market to the user. It also provides dashboard where user can compare and track the general sentiments and trends in the market. ",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/FOREX%20TRENDS.pptx?d=w73fedaa4c39d4877bdad5859889e6484&csf=1&web=1&e=mmKchF",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "forex.jfif")
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "forex.jfif"),
+	        "sample_document": "n/a"
         },
        
     ]
 
     filtered_projects = [project for project in projects if search_query.lower() in project["name"].lower()]
-
+    
     if not filtered_projects:
         st.write("No projects found.")
         return
@@ -345,6 +359,7 @@ def main():
                 st.write(f"**Code Repository Link:** {project['code_repo_link']}")
                 st.write(f"**Description:** {project['description']}")
                 st.write(f"**Document:** {project['documentation_link']}")
+                st.write(f"**Sample Document:** {project['sample_document']}")
             st.markdown("</div>", unsafe_allow_html=True)
         col_idx = (col_idx + 1) % 4
 
@@ -354,13 +369,8 @@ if __name__ == "__main__":
     with tab1:
         main()
 
-    
-      
     with tab2:
         status_report_page()
-
-   
-
 
     
 
