@@ -1,18 +1,39 @@
 import os
 import streamlit as st
-import requests  
+import requests
 from tabulate import tabulate
-import config as cf
+import config as cf  
+
+def check_password():
+    """Returns True if the user enters the correct password."""
+    def password_entered():
+        if st.session_state["password"] == cf.PASSWORD:
+            st.session_state["authenticated"] = True
+        else:
+            st.session_state["authenticated"] = False
+
+    if "authenticated" not in st.session_state:
+        st.session_state["authenticated"] = False
+
+    if st.session_state["authenticated"]:
+        return True
+    else:
+
+        st.title("Welcome!")
+        st.markdown("Please enter the password to access the Central Repository")
+
+        st.text_input("Password", type="password", on_change=password_entered, key="password")
+        if st.session_state.get("password") and not st.session_state["authenticated"]:
+            st.error("😕 Incorrect password")
+        return False
 
 st.markdown(
     """
     <style>
-    
     .streamlit-expander {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
     }
-   
     .streamlit-expander .css-15dtf11 {
         display: none !important;
     }
@@ -20,6 +41,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 def check_links(links):
     status_report = []
     for project_name, project_lead, link in links:
@@ -71,31 +93,23 @@ def generate_report(report):
     
     return table_html
 
-
 def status_report_page():
     st.title("Demo Links Status Report")
     
     demo_links = [
-       
-      
-        
         ("FinBot - A Financial ChatBot", "Kritadhi Maity", "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI"),
         ("Credit Scoring model", "Aditya Singh", "n/a"),
         ("AI Recommendation Bot", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Language Translation Bot", "Sushma Piraka", "n/a"),
         ("Trade Guard", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
-       
         ("Document Information Retrieval Bot", "Debarghya Maity", "http://52.66.10.81:8002/"),
-       
-       
         ("Document Sentiment Insights", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
         ("Document Intelligence Bot", "Kritadhi Maity", "https://huggingface.co/spaces/anang150296/Emaar-AI-chatbot"),
         ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
         ("WebInspect AI", "Debarghya Maity", "http://13.232.58.176:8004/"),
         ("Customer Review Sentiment Analysis", "Debarghya Maity", "http://13.232.58.176:8001/"),
         ("Forex Trends", "Kritadhi Maity", "http://13.232.58.176:8002/"),
-       
         ("Park Easy", "Akshita Ranjan", "http://52.66.10.81:8001/"),
     ]
 
@@ -107,11 +121,7 @@ def status_report_page():
     else:
         st.write("Click the button to check the status of the demo links.")
 
-
-
 def main():
-
-
     if 'show_notification' not in st.session_state:
         st.session_state.show_notification = True
 
@@ -169,10 +179,6 @@ def main():
         """, unsafe_allow_html=True)
         if st.button("Close Notification"):
             st.session_state.show_notification = False
-   
-
-
-
 
     projects = [
         {
@@ -184,7 +190,7 @@ def main():
             "description": "Model classifies users into either 'Good' or 'Bad' using features with 93% accuracy",
             "documentation_link": "n/a",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "credit-scoring.jfif"),
-	        "sample_document": "n/a"
+            "sample_document": "n/a"
         },
         {
             "name": "Trade Guard",
@@ -195,11 +201,8 @@ def main():
             "description": "POC for detecting 2 (circular trading and spoofing) market manipulation techniques using synthetically generated data",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Trade%20Guard.pptx?d=w575e23307d6348cea506ad14eb0e87f4&csf=1&web=1&e=mNtx0r",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "forex.jfif"),
-	        "sample_document": "n/a"
+            "sample_document": "n/a"
         },
-      
-        
-    
         {
             "name": "AI Recommendation Bot",
             "deployment_links": "n/a",
@@ -334,13 +337,12 @@ def main():
             "description": "Bot analyzes online articles and reports to provide daily summarized and latest updates in the Forex market to the user. It also provides dashboard where user can compare and track the general sentiments and trends in the market. ",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/FOREX%20TRENDS.pptx?d=w73fedaa4c39d4877bdad5859889e6484&csf=1&web=1&e=mmKchF",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "forex.jfif"),
-	        "sample_document": "n/a"
+            "sample_document": "n/a"
         },
-       
     ]
 
     filtered_projects = [project for project in projects if search_query.lower() in project["name"].lower()]
-    
+
     if not filtered_projects:
         st.write("No projects found.")
         return
@@ -364,15 +366,11 @@ def main():
         col_idx = (col_idx + 1) % 4
 
 if __name__ == "__main__":
-    tab1, tab2 = st.tabs(["Project Repository", "Project Status Report"])
+    if check_password():
+        tab1, tab2 = st.tabs(["Project Repository", "Project Status Report"])
 
-    with tab1:
-        main()
+        with tab1:
+            main()
 
-    with tab2:
-        status_report_page()
-
-    
-
-
-   
+        with tab2:
+            status_report_page()
