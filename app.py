@@ -103,7 +103,7 @@ def status_report_page():
         ("Language Translation Bot", "Sushma Piraka", "n/a"),
         ("Trade Guard", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
-        ("Document Information Retrieval Bot", "Debarghya Maity", "http://52.66.10.81:8002/"),
+        ("Document Information Retrieval Bot", "Debarghya Maity", "http://13.232.58.176:5005/"),
         ("Document Sentiment Insights", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
         ("Document Intelligence Bot", "Kritadhi Maity", "https://huggingface.co/spaces/anang150296/Emaar-AI-chatbot"),
         ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
@@ -240,7 +240,7 @@ def main():
         
         {
             "name": "Document Information Retrieval Bot",
-            "deployment_links": "http://52.66.10.81:8002/",
+            "deployment_links": "http://13.232.58.176:5005/",
             "creator": "Debarghya Maity",
             "status": "Running",
             "code_repo_link": "n/a",

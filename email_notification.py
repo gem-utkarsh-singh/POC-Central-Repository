@@ -95,7 +95,7 @@ def daily_task():
         ("Trade Guard", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
        
-        ("Document Information Retrieval Bot", "Debarghya Maity", "http://52.66.10.81:8002/"),
+        ("Document Information Retrieval Bot", "Debarghya Maity", "http://13.232.58.176:5005/"),
        
        
         ("Document Sentiment Insights", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
