@@ -105,12 +105,12 @@ def status_report_page():
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
         ("Document Information Retrieval Bot", "Debarghya Maity", "http://13.232.58.176:5005/"),
         ("Document Sentiment Insights", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
-        ("Document Intelligence Bot", "Kritadhi Maity", "https://huggingface.co/spaces/anang150296/Emaar-AI-chatbot"),
+        ("Document Intelligence Bot", "Kritadhi Maity", "https://huggingface.co/spaces/maitykritadhi/Document_Intelligence_Bot"),
         ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
         ("WebInspect AI", "Debarghya Maity", "http://13.232.58.176:8004/"),
         ("Customer Review Sentiment Analysis", "Debarghya Maity", "http://13.232.58.176:8001/"),
-        ("Forex Trends", "Kritadhi Maity", "http://13.232.58.176:8002/"),
-        ("Park Easy", "Akshita Ranjan", "http://52.66.10.81:8001/"),
+        ("Forex Trends", "Debarghya Maity", "http://13.232.58.176:8002/"),
+        ("Park Easy", "Akshita Rajain", "http://52.66.10.81:8001/"),
     ]
 
     if st.button("Check Links"):
@@ -309,7 +309,7 @@ def main():
         {
             "name": "Park Easy",
             "deployment_links": "http://52.66.10.81:8001/",
-            "creator": "Akshita Ranjan",
+            "creator": "Akshita Rajain",
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "Extract features of the Car such as model, color, registration number, defects and scratches from the input car image using image processing models.",
@@ -331,7 +331,7 @@ def main():
         {
             "name": "Forex Trends",
             "deployment_links": "http://13.232.58.176:8002/",
-            "creator": "Kritadhi Maity",
+            "creator": "Debarghya Maity",
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "Bot analyzes online articles and reports to provide daily summarized and latest updates in the Forex market to the user. It also provides dashboard where user can compare and track the general sentiments and trends in the market. ",

@@ -1,8 +1,13 @@
-import smtplib, ssl
+import smtplib
+import ssl
 import requests
 from tabulate import tabulate
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import schedule
+import time
+from datetime import datetime
+from pytz import timezone
 
 port = 465  # For SSL
 password = "nfmrjxivowbykzjh"
@@ -10,7 +15,9 @@ password = "nfmrjxivowbykzjh"
 # Create a secure SSL context
 context = ssl.create_default_context()
 sender_email = "poc.status.notification@gmail.com"
-receiver_emails = ["utkarsh.singh@geminisolutions.com","sudhanshu.malhotra@geminisolutions.com"]
+receiver_emails = ["utkarsh.singh@geminisolutions.com", "sudhanshu.malhotra@geminisolutions.com", "prashant.solanki@geminisolutions.com",
+                   "aditya.singh1@geminisolutions.com", "saurav.anand@geminisolutions.com", "sushma.piraka@geminisolutions.com",
+                   "anang.tomar@geminisolutions.com", "debarghya.maity@geminisolutions.com", "kritadhi.maity@geminisolutions.com", "akshita.rajain@geminisolutions.com"]
 
 def send_email(report_html):
     msg = MIMEMultipart('alternative')
@@ -24,7 +31,7 @@ def send_email(report_html):
             <p>Hi Team,</p>
             <p>Here is an update of the working status of the Deployment Links of the POC projects:</p>
             {report_html}
-            <p>Regards,<br>Anang Tomar</p>
+            <p>Regards,<br>Data Science Team</p>
         </body>
     </html>
     """
@@ -94,24 +101,36 @@ def daily_task():
         ("Language Translation Bot", "Sushma Piraka", "n/a"),
         ("Trade Guard", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
-       
         ("Document Information Retrieval Bot", "Debarghya Maity", "http://13.232.58.176:5005/"),
-       
-       
         ("Document Sentiment Insights", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
-        ("Document Intelligence Bot", "Kritadhi Maity", "https://huggingface.co/spaces/anang150296/Emaar-AI-chatbot"),
+        ("Document Intelligence Bot", "Kritadhi Maity", "https://huggingface.co/spaces/maitykritadhi/Document_Intelligence_Bot"),
         ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
         ("WebInspect AI", "Debarghya Maity", "http://13.232.58.176:8004/"),
         ("Customer Review Sentiment Analysis", "Debarghya Maity", "http://13.232.58.176:8001/"),
-        ("Forex Trends", "Kritadhi Maity", "http://13.232.58.176:8002/"),
-       
-        ("Park Easy", "Akshita Ranjan", "http://52.66.10.81:8001/"),
-
+        ("Forex Trends", "Debarghya Maity", "http://13.232.58.176:8002/"),
+        ("Park Easy", "Akshita Rajain", "http://52.66.10.81:8001/"),
     ]
 
     report = check_links(demo_links)
     report_table = generate_report(report)
     send_email(report_table)
 
+# Scheduler function
+def run_scheduler():
+    india_tz = timezone('Asia/Kolkata')
+
+    def task():
+        current_time = datetime.now(india_tz).time()
+        if current_time.hour == 10 or current_time.hour == 18:
+            daily_task()
+
+    # Schedule the tasks
+    schedule.every().day.at("10:25", tz=india_tz).do(daily_task)
+    schedule.every().day.at("17:00", tz=india_tz).do(daily_task)
+
+    while True:
+        schedule.run_pending()
+        time.sleep(60)
+
 if __name__ == "__main__":
-    daily_task()
+    run_scheduler()
