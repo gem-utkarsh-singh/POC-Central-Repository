@@ -13,7 +13,9 @@ password = "nfmrjxivowbykzjh"
 # Create a secure SSL context
 context = ssl.create_default_context()
 sender_email = "poc.status.notification@gmail.com"
-receiver_emails = ["utkarsh.singh@geminisolutions.com"]
+receiver_emails = ["utkarsh.singh@geminisolutions.com", "sudhanshu.malhotra@geminisolutions.com", "prashant.solanki@geminisolutions.com",
+                   "aditya.singh1@geminisolutions.com", "saurav.anand@geminisolutions.com", "sushma.piraka@geminisolutions.com",
+                   "anang.tomar@geminisolutions.com", "debarghya.maity@geminisolutions.com", "kritadhi.maity@geminisolutions.com", "akshita.rajain@geminisolutions.com"]]
 
 def send_email(report_html):
     msg = MIMEMultipart('alternative')
