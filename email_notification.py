@@ -4,8 +4,6 @@ import requests
 from tabulate import tabulate
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-import schedule
-import time
 from datetime import datetime
 from pytz import timezone
 
@@ -109,28 +107,14 @@ def daily_task():
         ("Customer Review Sentiment Analysis", "Debarghya Maity", "http://13.232.58.176:8001/"),
         ("Forex Trends", "Debarghya Maity", "http://13.232.58.176:8002/"),
         ("Park Easy", "Akshita Rajain", "http://52.66.10.81:8001/"),
+        ("Teams Transcript Bot","Debarghya Maity/Prashant Solanki","https://teams.microsoft.com/l/app/2df02d86-770a-4c51-a6d7-b5def211a1ca?source=app-details-dialog" )
     ]
 
     report = check_links(demo_links)
     report_table = generate_report(report)
     send_email(report_table)
 
-# Scheduler function
-def run_scheduler():
-    india_tz = timezone('Asia/Kolkata')
-
-    def task():
-        current_time = datetime.now(india_tz).time()
-        if current_time.hour == 10 or current_time.hour == 18:
-            daily_task()
-
-    # Schedule the tasks
-    schedule.every().day.at("10:25", tz=india_tz).do(daily_task)
-    schedule.every().day.at("17:00", tz=india_tz).do(daily_task)
-
-    while True:
-        schedule.run_pending()
-        time.sleep(60)
-
+# Directly call the daily_task function to run the script once
 if __name__ == "__main__":
-    run_scheduler()
+    daily_task()
+
