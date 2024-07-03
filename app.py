@@ -348,7 +348,7 @@ def main():
             "code_repo_link": "n/a",
             "description": "Bot is your ultimate assistant for recording and summarizing meetings within Microsoft Teams. It automatically starts and stops recording at the beginning and end of your meetings, notifying participants when recording begins and ends. After the meeting, it provides a concise overview, highlighting key points and decisions made during the session, ensuring everyone stays informed and on the same page.",
             "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Team%20Transcript%20Bot.pptx?d=w9cd9434a0618486e8260305982d394f0&csf=1&web=1&e=4Xc0tP",
-            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i1.jfif"),
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "i1.jpg"),
             "sample_document": "n/a"
         },
         
