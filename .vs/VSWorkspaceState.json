@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DOCS",
+    "\\DOCS\\POCs Sample documents",
+    "\\DOCS\\POCs Sample documents\\organization structure docs"
   ],
-  "SelectedNode": "\\app.py",
+  "SelectedNode": "\\upload_test.py",
   "PreviewInSolutionExplorer": false
 }
