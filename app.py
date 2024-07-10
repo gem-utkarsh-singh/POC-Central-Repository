@@ -99,7 +99,7 @@ def status_report_page():
     demo_links = [
         ("FinBot - A Financial ChatBot", "Kritadhi Maity", "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI"),
         ("Credit Scoring model", "Aditya Singh", "n/a"),
-        ("AI Recommendation Bot", "Aditya Singh/Prashant Solanki", "n/a"),
+        ("AI Recommendation Bot", "Saurav Anand", "n/a"),
         ("Language Translation Bot", "Sushma Piraka", "n/a"),
         ("Trade Guard", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
@@ -207,7 +207,7 @@ def main():
         {
             "name": "AI Recommendation Bot",
             "deployment_links": "n/a",
-            "creator": "Saurav Anand, Aditya Singh",
+            "creator": "Saurav Anand",
             "status": "n/a",
             "code_repo_link": "n/a",
             "description": "Recommendation system based on text, image and video input created using multi-model architecture",
