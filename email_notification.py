@@ -94,7 +94,7 @@ def daily_task():
     demo_links = [
         ("FinBot - A Financial ChatBot", "Kritadhi Maity", "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI"),
         ("Credit Scoring model", "Aditya Singh", "n/a"),
-        ("AI Recommendation Bot", "Aditya Singh/Prashant Solanki", "n/a"),
+        ("AI Recommendation Bot", "Saurav Anand", "n/a"),
         ("Language Translation Bot", "Sushma Piraka", "n/a"),
         ("Trade Guard", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
