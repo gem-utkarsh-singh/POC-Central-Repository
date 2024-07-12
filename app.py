@@ -351,6 +351,17 @@ def main():
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "i1.jpg"),
             "sample_document": "n/a"
         },
+        {
+            "name": "Product Reviews Sentiment Analysis BOT",
+            "deployment_links": "http://52.66.10.81:8501/",
+            "creator": "Sumit Kumar",
+            "status": "Running",
+            "code_repo_link": "n/a",
+            "description": "Product Reviews Sentiment Analysis application leverages advanced natural language processing techniques to evaluate customer feedback on various drink products. This powerful tool categorizes reviews into specific areas such as taste and flavor, quality, packaging, and value for money. By analyzing both positive and negative sentiments, the application provides valuable insights into consumer opinions, helping brands improve their products and marketing strategies",
+            "documentation_link": "n/a",
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "product-sentiment.jpg"),
+            "sample_document": "n/a"
+        },
         
     ]
 
