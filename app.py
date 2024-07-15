@@ -320,7 +320,7 @@ def main():
         },
         {
             "name": "FinBot - A Financial ChatBot",
-            "deployment_links": "http://52.66.10.81:8502/",
+            "deployment_links": "http://13.232.58.176:8502/",
             "creator": "Kritadhi Maity",
             "status": "Running",
             "code_repo_link": "https://huggingface.co/spaces/maitykritadhi/Groq_Financial_Chatbot_Streamlit_UI/tree/main",
