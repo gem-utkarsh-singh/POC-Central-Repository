@@ -97,7 +97,7 @@ def status_report_page():
     st.title("Demo Links Status Report")
     
     demo_links = [
-        ("FinBot - A Financial ChatBot", "Kritadhi Maity", "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI"),
+        ("FinBot - A Financial ChatBot", "Kritadhi Maity", "http://13.232.58.176:8502/"),
         ("Credit Scoring model", "Aditya Singh", "n/a"),
         ("AI Recommendation Bot", "Saurav Anand", "n/a"),
         ("Language Translation Bot", "Sushma Piraka", "n/a"),
@@ -105,7 +105,7 @@ def status_report_page():
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
         ("Document Information Retrieval Bot", "Debarghya Maity", "http://13.232.58.176:5005/"),
         ("Document Sentiment Insights", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
-        ("Document Intelligence Bot", "Kritadhi Maity", "https://huggingface.co/spaces/maitykritadhi/Document_Intelligence_Bot"),
+        ("Document Intelligence Bot", "Kritadhi Maity", "http://52.66.10.81:8502/"),
         ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
         ("WebInspect AI", "Debarghya Maity", "http://13.232.58.176:8004/"),
         ("Customer Review Sentiment Analysis", "Debarghya Maity", "http://13.232.58.176:8001/"),
@@ -264,12 +264,12 @@ def main():
         },
         {
             "name": "Document Intelligence Bot",
-            "deployment_links": "https://huggingface.co/spaces/maitykritadhi/Document_Intelligence_Bot",
+            "deployment_links": "http://52.66.10.81:8502/",
             "creator": "Kritadhi Maity",
             "status": "Running",
             "code_repo_link": "n/a",
             "description": "Retrieve important key matrices from the documents as per client use case and document type.",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Document%20Intelligence%20Bot?csf=1&web=1&e=ECkTpV",
+            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Document%20Intelligence%20Bot?csf=1&web=1&e=9nKIMn",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "intelligence.jpg"),
 	        "sample_document": "https://geminisolutionsindpvtltd-my.sharepoint.com/:f:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/SAMPLE%20DOCUMENTS/Document%20Intelligence%20Bot?csf=1&web=1&e=o3v3F2"
         },
@@ -320,12 +320,12 @@ def main():
         },
         {
             "name": "FinBot - A Financial ChatBot",
-            "deployment_links": "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI",
+            "deployment_links": "http://52.66.10.81:8502/",
             "creator": "Kritadhi Maity",
             "status": "Running",
             "code_repo_link": "https://huggingface.co/spaces/maitykritadhi/Groq_Financial_Chatbot_Streamlit_UI/tree/main",
             "description": "Analyzes the financial reports of different companies and provide a QA functionality where user can query the bot to get different financial metrics information from documents and perform comparative analysis based on multiple financial reports.",
-            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:w:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Financial%20Chatbot%20documentation.docx?d=wb650909fbb9d4c7988422c47bb385ee3&csf=1&web=1&e=9LxapJ",
+            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:w:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Financial%20Chatbot%20documentation.docx?d=waa685423e4274017bd3b5b8c07154cec&csf=1&web=1&e=3oCXNQ",
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "Chatbots-for-financial-services.jpg"),
 	        "sample_document": "n/a"
         },

@@ -92,7 +92,7 @@ def generate_report(report):
 
 def daily_task():
     demo_links = [
-        ("FinBot - A Financial ChatBot", "Kritadhi Maity", "https://huggingface.co/spaces/maitykritadhi/Kr_Financial_Chatbot_StreamLitUI"),
+        ("FinBot - A Financial ChatBot", "Kritadhi Maity", "http://13.232.58.176:8502/"),
         ("Credit Scoring model", "Aditya Singh", "n/a"),
         ("AI Recommendation Bot", "Saurav Anand", "n/a"),
         ("Language Translation Bot", "Sushma Piraka", "n/a"),
@@ -100,7 +100,7 @@ def daily_task():
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
         ("Document Information Retrieval Bot", "Debarghya Maity", "http://13.232.58.176:5005/"),
         ("Document Sentiment Insights", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
-        ("Document Intelligence Bot", "Kritadhi Maity", "https://huggingface.co/spaces/maitykritadhi/Document_Intelligence_Bot"),
+        ("Document Intelligence Bot", "Kritadhi Maity", "http://52.66.10.81:8502/"),
         ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
         ("WebInspect AI", "Debarghya Maity", "http://13.232.58.176:8004/"),
         ("Customer Review Sentiment Analysis", "Debarghya Maity", "http://13.232.58.176:8001/"),
