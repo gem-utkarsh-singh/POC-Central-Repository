@@ -92,14 +92,14 @@ def generate_report(report):
 
 def daily_task():
     demo_links = [
-        ("FinBot - A Financial ChatBot", "Kritadhi Maity", "http://13.232.58.176:8502/"),
+        ("FinBot - A Financial ChatBot", "Kritadhi Maity", "http://13.232.253.41:8502/"),
         ("Credit Scoring model", "Aditya Singh", "n/a"),
         ("AI Recommendation Bot", "Saurav Anand", "n/a"),
         ("Language Translation Bot", "Sushma Piraka", "n/a"),
         ("Trade Guard", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
         ("Document Information Retrieval Bot", "Debarghya Maity", "http://13.232.58.176:5005/"),
-        ("Document Sentiment Insights", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
+        ("Document Sentiment Insights", "Nitish John Toppo", "http://52.66.10.81:8503/"),
         ("Document Intelligence Bot", "Kritadhi Maity", "http://52.66.10.81:8502/"),
         ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
         ("WebInspect AI", "Debarghya Maity", "http://13.232.58.176:8004/"),

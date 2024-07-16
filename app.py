@@ -97,14 +97,14 @@ def status_report_page():
     st.title("Demo Links Status Report")
     
     demo_links = [
-        ("FinBot - A Financial ChatBot", "Kritadhi Maity", "http://13.232.58.176:8502/"),
+        ("FinBot - A Financial ChatBot", "Kritadhi Maity", "http://13.232.253.41:8502/"),
         ("Credit Scoring model", "Aditya Singh", "n/a"),
         ("AI Recommendation Bot", "Saurav Anand", "n/a"),
         ("Language Translation Bot", "Sushma Piraka", "n/a"),
         ("Trade Guard", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
         ("Document Information Retrieval Bot", "Debarghya Maity", "http://13.232.58.176:5005/"),
-        ("Document Sentiment Insights", "Nitish John Toppo", "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app"),
+        ("Document Sentiment Insights", "Nitish John Toppo", "http://52.66.10.81:8503/"),
         ("Document Intelligence Bot", "Kritadhi Maity", "http://52.66.10.81:8502/"),
         ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
         ("WebInspect AI", "Debarghya Maity", "http://13.232.58.176:8004/"),
@@ -253,7 +253,7 @@ def main():
         
         {
             "name": "Customer Review Sentiment Analysis",
-            "deployment_links": "https://usairlinessentimentanalysis-asmerbqllmx35uappbcvamo.streamlit.app",
+            "deployment_links": "http://52.66.10.81:8503/",
             "creator": "Nitish John Toppo",
             "status": "Running",
             "code_repo_link": "n/a",
@@ -320,7 +320,7 @@ def main():
         },
         {
             "name": "FinBot - A Financial ChatBot",
-            "deployment_links": "http://13.232.58.176:8502/",
+            "deployment_links": "http://13.232.253.41:8502/",
             "creator": "Kritadhi Maity",
             "status": "Running",
             "code_repo_link": "https://huggingface.co/spaces/maitykritadhi/Groq_Financial_Chatbot_Streamlit_UI/tree/main",
