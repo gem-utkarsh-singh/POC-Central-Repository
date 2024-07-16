@@ -14,7 +14,7 @@ import os
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
-url = 'http://localhost:8501/'
+url = 'http://13.232.253.41:8502/'
 
 try:
     print("Opening the web application...")

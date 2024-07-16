@@ -14,7 +14,7 @@ import os
 
 driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
 driver.maximize_window()
-url = 'http://localhost:8501/'
+url = 'http://52.66.10.81:8502/'
 
 file_path1 = r'C:\Users\Utkarsh.Singh\Gemini Projects\POC-Central-Repository\DOCS\Document Intelligence Bot.pptx'
 screenshot_path = os.path.join(os.path.expanduser("~"), "Downloads", "document_inteligence_screenshot.png")

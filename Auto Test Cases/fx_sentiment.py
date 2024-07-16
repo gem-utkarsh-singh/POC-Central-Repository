@@ -12,7 +12,7 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 driver.maximize_window()
  
  
-url = 'http://13.232.58.176:8002/'
+url = 'http://13.232.253.41:8004'
  
 text_to_enter1 = "2017/04/01"
 text_to_enter2 = "2024/07/01"

@@ -19,7 +19,7 @@ def main():
 
  
  
-   url = 'http://13.232.58.176:8004/'
+   url = 'http://13.232.253.41:8003/'
    text_to_enter = "https://www.saucedemo.com/"
  
    try:

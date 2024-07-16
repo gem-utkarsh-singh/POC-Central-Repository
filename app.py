@@ -103,13 +103,13 @@ def status_report_page():
         ("Language Translation Bot", "Sushma Piraka", "n/a"),
         ("Trade Guard", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
-        ("Document Information Retrieval Bot", "Debarghya Maity", "http://13.232.58.176:5005/"),
-        ("Document Sentiment Insights", "Nitish John Toppo", "http://52.66.10.81:8503/"),
+        ("Document Information Retrieval Bot", "Debarghya Maity", "http://13.232.253.41:8005/"),
+        ("Document Sentiment Insights", "Debarghya Maity", "http://13.232.253.41:8002/")
         ("Document Intelligence Bot", "Kritadhi Maity", "http://52.66.10.81:8502/"),
-        ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
-        ("WebInspect AI", "Debarghya Maity", "http://13.232.58.176:8004/"),
-        ("Customer Review Sentiment Analysis", "Debarghya Maity", "http://13.232.58.176:8001/"),
-        ("Forex Trends", "Debarghya Maity", "http://13.232.58.176:8002/"),
+        ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.253.41:8001"),
+        ("WebInspect AI", "Debarghya Maity", "http://13.232.253.41:8003/"),
+        ("Customer Review Sentiment Analysis", "Nitish John Toppo", " http://52.66.10.81:8503/"),
+        ("Forex Trends", "Debarghya Maity", "http://13.232.253.41:8004"),
         ("Park Easy", "Akshita Rajain", "http://52.66.10.81:8001/"),
         ("Teams Transcript Bot","Debarghya Maity/Prashant Solanki","https://teams.microsoft.com/l/app/2df02d86-770a-4c51-a6d7-b5def211a1ca?source=app-details-dialog" )
     ]
@@ -241,7 +241,7 @@ def main():
         
         {
             "name": "Document Information Retrieval Bot",
-            "deployment_links": "http://13.232.58.176:5005/",
+            "deployment_links": "http://13.232.253.41:8005/",
             "creator": "Debarghya Maity",
             "status": "Running",
             "code_repo_link": "n/a",
@@ -253,7 +253,7 @@ def main():
         
         {
             "name": "Customer Review Sentiment Analysis",
-            "deployment_links": "http://52.66.10.81:8503/",
+            "deployment_links": " http://52.66.10.81:8503/",
             "creator": "Nitish John Toppo",
             "status": "Running",
             "code_repo_link": "n/a",
@@ -275,7 +275,7 @@ def main():
         },
         {
             "name": "Organizational Structure Construction",
-            "deployment_links": "http://13.232.58.176:8003/",
+            "deployment_links": "http://13.232.253.41:8001",
             "creator": "Debarghya Maity",
             "status": "Running",
             "code_repo_link": "n/a",
@@ -286,7 +286,7 @@ def main():
         },
         {
             "name": "WebInspect AI",
-            "deployment_links": "http://13.232.58.176:8004/",
+            "deployment_links": "http://13.232.253.41:8003/",
             "creator": "Debarghya Maity",
             "status": "Running",
             "code_repo_link": "n/a",
@@ -297,7 +297,7 @@ def main():
         },
         {
             "name": "Document Sentiment Insights",
-            "deployment_links": "http://13.232.58.176:8001/",
+            "deployment_links": "http://13.232.253.41:8002/",
             "creator": "Debarghya Maity",
             "status": "Running",
             "code_repo_link": "n/a",
@@ -331,7 +331,7 @@ def main():
         },
         {
             "name": "Forex Trends",
-            "deployment_links": "http://13.232.58.176:8002/",
+            "deployment_links": "http://13.232.253.41:8004",
             "creator": "Debarghya Maity",
             "status": "Running",
             "code_repo_link": "n/a",

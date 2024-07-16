@@ -13,7 +13,7 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 driver.maximize_window()
 
  
-url = 'http://13.232.58.176:8003/'
+url = 'http://13.232.253.41:8001/'
  
 file_path1 = r'C:\Users\Utkarsh.Singh\Gemini Projects\POC-Central-Repository\DOCS\POCs Sample documents\organization structure docs\ex_3_document_1.pdf'
 file_path2 = r'C:\Users\Utkarsh.Singh\Gemini Projects\POC-Central-Repository\DOCS\POCs Sample documents\organization structure docs\ex_3_document_2.pdf'
