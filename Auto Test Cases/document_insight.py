@@ -12,7 +12,7 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 driver.maximize_window()
 
 
-url = 'http://13.232.58.176:8001/'
+url = 'http://13.232.253.41:8002/'
 
 file_path1 = r'C:\Users\Utkarsh.Singh\Gemini Projects\POC-Central-Repository\DOCS\POCs Sample documents\earnings call report docs\META-Q1-2023-Earnings-Call-Transcript.pdf'
 screenshot_path = os.path.join(os.path.expanduser("~"), "Downloads", "screenshot.png")

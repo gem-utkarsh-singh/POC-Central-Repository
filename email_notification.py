@@ -15,7 +15,7 @@ context = ssl.create_default_context()
 sender_email = "poc.status.notification@gmail.com"
 receiver_emails = ["utkarsh.singh@geminisolutions.com", "sudhanshu.malhotra@geminisolutions.com", "prashant.solanki@geminisolutions.com",
                    "aditya.singh1@geminisolutions.com", "saurav.anand@geminisolutions.com", "sushma.piraka@geminisolutions.com",
-                   "anang.tomar@geminisolutions.com", "debarghya.maity@geminisolutions.com", "kritadhi.maity@geminisolutions.com", "akshita.rajain@geminisolutions.com"]
+                   "anang.tomar@geminisolutions.com", "debarghya.maity@geminisolutions.com", "kritadhi.maity@geminisolutions.com", "akshita.rajain@geminisolutions.com", "sumit.kumar@geminisolutions.com"]
 def send_email(report_html):
     msg = MIMEMultipart('alternative')
     msg['Subject'] = "Demo Links Status Report"
@@ -98,15 +98,16 @@ def daily_task():
         ("Language Translation Bot", "Sushma Piraka", "n/a"),
         ("Trade Guard", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
-        ("Document Information Retrieval Bot", "Debarghya Maity", "http://13.232.58.176:5005/"),
-        ("Document Sentiment Insights", "Nitish John Toppo", "http://52.66.10.81:8503/"),
+        ("Document Information Retrieval Bot", "Debarghya Maity", "http://13.232.253.41:8005/"),
+        ("Document Sentiment Insights", "Debarghya Maity", "http://13.232.253.41:8002/")
         ("Document Intelligence Bot", "Kritadhi Maity", "http://52.66.10.81:8502/"),
-        ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.58.176:8003/"),
-        ("WebInspect AI", "Debarghya Maity", "http://13.232.58.176:8004/"),
-        ("Customer Review Sentiment Analysis", "Debarghya Maity", "http://13.232.58.176:8001/"),
-        ("Forex Trends", "Debarghya Maity", "http://13.232.58.176:8002/"),
+        ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.253.41:8001/"),
+        ("WebInspect AI", "Debarghya Maity", "http://13.232.253.41:8003/"),
+        ("Customer Review Sentiment Analysis", "Nitish John Toppo", " http://52.66.10.81:8503/"),
+        ("Forex Trends", "Debarghya Maity", "http://13.232.253.41:8004"),
         ("Park Easy", "Akshita Rajain", "http://52.66.10.81:8001/"),
         ("Teams Transcript Bot","Debarghya Maity/Prashant Solanki","https://teams.microsoft.com/l/app/2df02d86-770a-4c51-a6d7-b5def211a1ca?source=app-details-dialog" )
+        ("Product Reviews Sentiment Analysis BOT", "Sumit Kumar", "http://52.66.10.81:8501/")
     ]
 
     report = check_links(demo_links)
