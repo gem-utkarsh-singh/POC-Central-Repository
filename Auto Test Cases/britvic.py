@@ -36,6 +36,9 @@ try:
     
     print("Pausing to allow for any processing or downloads to complete...")
     time.sleep(5)
+
+    print("Table for Reviews and Sentiment Scores has been downloaded successfully")
+
     
 except Exception as inner_e:
     print(f"An additional error occurred while handling the initial error: {str(inner_e)}")

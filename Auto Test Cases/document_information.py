@@ -3,18 +3,17 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.edge.service import Service as EdgeService
-from webdriver_manager.microsoft import EdgeChromiumDriverManager
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.action_chains import ActionChains
 import time
 import os
 
-driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
-
+# Initialize the Chrome driver
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+driver.maximize_window()
 url = 'http://13.232.253.41:8005/'
+
 
 file_path1 = r'C:\Users\Utkarsh.Singh\Gemini Projects\POC-Central-Repository\DOCS\POCs Sample documents\Document Information Retrieval Bot\bol.pdf'
 screenshot_path = os.path.join(os.path.expanduser("~"), "Downloads", "screenshot.png")
@@ -30,6 +29,12 @@ try:
     print("File upload button located.")
     upload_button.click()
     time.sleep(2)
+
+    print("Waiting for the actual file input element...")
+    file_input = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, '//input[@type="file"]'))
+    )
+    print("File input element located.")
 
     # Make sure the file input element is visible and interactable
     driver.execute_script("arguments[0].style.display = 'block'; arguments[0].style.visibility = 'visible';", file_input)
