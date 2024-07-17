@@ -99,14 +99,14 @@ def daily_task():
         ("Trade Guard", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
         ("Document Information Retrieval Bot", "Debarghya Maity", "http://13.232.253.41:8005/"),
-        ("Document Sentiment Insights", "Debarghya Maity", "http://13.232.253.41:8002/")
+        ("Document Sentiment Insights", "Debarghya Maity", "http://13.232.253.41:8002/"),
         ("Document Intelligence Bot", "Kritadhi Maity", "http://52.66.10.81:8502/"),
         ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.253.41:8001/"),
         ("WebInspect AI", "Debarghya Maity", "http://13.232.253.41:8003/"),
         ("Customer Review Sentiment Analysis", "Nitish John Toppo", " http://52.66.10.81:8503/"),
         ("Forex Trends", "Debarghya Maity", "http://13.232.253.41:8004"),
         ("Park Easy", "Akshita Rajain", "http://52.66.10.81:8001/"),
-        ("Teams Transcript Bot","Debarghya Maity/Prashant Solanki","https://teams.microsoft.com/l/app/2df02d86-770a-4c51-a6d7-b5def211a1ca?source=app-details-dialog" )
+        ("Teams Transcript Bot","Debarghya Maity/Prashant Solanki","https://teams.microsoft.com/l/app/2df02d86-770a-4c51-a6d7-b5def211a1ca?source=app-details-dialog" ),
         ("Product Reviews Sentiment Analysis BOT", "Sumit Kumar", "http://52.66.10.81:8501/")
     ]
 
