@@ -104,7 +104,7 @@ def status_report_page():
         ("Trade Guard", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
         ("Document Information Retrieval Bot", "Debarghya Maity", "http://13.232.253.41:8005/"),
-        ("Document Sentiment Insights", "Debarghya Maity", "http://13.232.253.41:8002/")
+        ("Document Sentiment Insights", "Debarghya Maity", "http://13.232.253.41:8002/"),
         ("Document Intelligence Bot", "Kritadhi Maity", "http://52.66.10.81:8502/"),
         ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.253.41:8001"),
         ("WebInspect AI", "Debarghya Maity", "http://13.232.253.41:8003/"),
