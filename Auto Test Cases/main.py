@@ -10,15 +10,15 @@ from Organization_structure import org_struc
 from WebInspect_AI import web_inspect
 
 # input files
-file_doc_info = r'C:\Users\Utkarsh.Singh\Gemini Projects\POC-Central-Repository\DOCS\POCs Sample documents\Document Information Retrieval Bot\bol.pdf'
+file_doc_info = r'/home/ubuntu/POC-Central-Repository/DOCS/POCs Sample documents/Document Information Retrieval Bot/bol.pdf'
 text_to_enter1 = "2017/04/01"
 text_to_enter2 = "2024/07/01"
-file_park_easy = r'C:\Users\Utkarsh.Singh\Gemini Projects\POC-Central-Repository\DOCS\POCs Sample documents\Park Easy\toyota_fortuner_front.jpg'
-file_doc_intelligence = r'C:\Users\Utkarsh.Singh\Gemini Projects\POC-Central-Repository\DOCS\Document Intelligence Bot.pptx'
-file_doc_insight = r'C:\Users\Utkarsh.Singh\Gemini Projects\POC-Central-Repository\DOCS\POCs Sample documents\earnings call report docs\META-Q1-2023-Earnings-Call-Transcript.pdf'
-file_org1 = r'C:\Users\Utkarsh.Singh\Gemini Projects\POC-Central-Repository\DOCS\POCs Sample documents\organization structure docs\ex_3_document_1.pdf'
-file_org2 = r'C:\Users\Utkarsh.Singh\Gemini Projects\POC-Central-Repository\DOCS\POCs Sample documents\organization structure docs\ex_3_document_2.pdf'
-text_to_enter = "https://www.saucedemo.com/" 
+file_park_easy = r'/home/ubuntu/POC-Central-Repository/DOCS/POCs Sample documents/Park Easy/toyota_fortuner_front.jpg'
+file_doc_intelligence = r'/home/ubuntu/POC-Central-Repository/DOCS/POCs Sample documents/Document Intelligence Bot/environmental-statement-pune-phase1-2022.pdf'
+file_doc_insight = r'/home/ubuntu/POC-Central-Repository/DOCS/POCs Sample documents/earnings call report docs/META-Q1-2023-Earnings-Call-Transcript.pdf'
+file_org1 = r'/home/ubuntu/POC-Central-Repository/DOCS/POCs Sample documents/organization structure docs/ex_3_document_1.pdf'
+file_org2 = r'/home/ubuntu/POC-Central-Repository/DOCS/POCs Sample documents/organization structure docs/ex_3_document_2.pdf'
+text_to_enter = "https://www.saucedemo.com/"
 
 
 
