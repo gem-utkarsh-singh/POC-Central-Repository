@@ -111,7 +111,8 @@ def status_report_page():
         ("Customer Review Sentiment Analysis", "Nitish John Toppo", " http://52.66.10.81:8503/"),
         ("Forex Trends", "Debarghya Maity", "http://13.232.253.41:8004"),
         ("Park Easy", "Akshita Rajain", "http://52.66.10.81:8001/"),
-        ("Teams Transcript Bot","Debarghya Maity/Prashant Solanki","https://teams.microsoft.com/l/app/2df02d86-770a-4c51-a6d7-b5def211a1ca?source=app-details-dialog" )
+        ("Teams Transcript Bot","Debarghya Maity/Prashant Solanki","https://teams.microsoft.com/l/app/2df02d86-770a-4c51-a6d7-b5def211a1ca?source=app-details-dialog" ),
+        ("Hospital Department Identification", "Kritadhi Maity", "http://13.232.253.41:8504/")
     ]
 
     if st.button("Check Links"):
@@ -362,6 +363,17 @@ def main():
             "icon_path": os.path.join(cf.BASE_PATH, "icons", "product-sentiment.jpg"),
             "sample_document": "n/a"
         },
+        {
+            "name": "Hospital Department Identification",
+            "deployment_links": "http://13.232.253.41:8504/",
+            "creator": "Kritadhi Maity",
+            "status": "Running",
+            "code_repo_link": "n/a",
+            "description": "A chatbot which understands the symptoms of the patient and finds the right speciality department to treat it.",
+            "documentation_link": "https://geminisolutionsindpvtltd-my.sharepoint.com/:p:/r/personal/anang_tomar_geminisolutions_com/Documents/POC%20Documentation/Hospital%C2%A0Department%20Classification.pptx?d=wfb0878b7999942dcade4067f6244e84b&csf=1&web=1&e=aobmkP",
+            "icon_path": os.path.join(cf.BASE_PATH, "icons", "healthcare.jfif"),
+            "sample_document": "n/a"
+        }
         
     ]
 
