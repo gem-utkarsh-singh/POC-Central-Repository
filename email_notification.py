@@ -107,7 +107,8 @@ def daily_task():
         ("Forex Trends", "Debarghya Maity", "http://13.232.253.41:8004"),
         ("Park Easy", "Akshita Rajain", "http://52.66.10.81:8001/"),
         ("Teams Transcript Bot","Debarghya Maity/Prashant Solanki","https://teams.microsoft.com/l/app/2df02d86-770a-4c51-a6d7-b5def211a1ca?source=app-details-dialog" ),
-        ("Product Reviews Sentiment Analysis BOT", "Sumit Kumar", "http://52.66.10.81:8501/")
+        ("Product Reviews Sentiment Analysis BOT", "Sumit Kumar", "http://52.66.10.81:8501/"),
+        ("Hospital Department Identification", "Kritadhi Maity", "http://13.232.253.41:8504/")
     ]
 
     report = check_links(demo_links)
