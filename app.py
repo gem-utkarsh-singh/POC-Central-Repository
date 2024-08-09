@@ -103,7 +103,7 @@ def status_report_page():
         ("Language Translation Bot", "Sushma Piraka", "n/a"),
         ("Trade Guard", "Aditya Singh/Prashant Solanki", "n/a"),
         ("Gemini Policy Bot", "Debarghya Maity", "n/a"),
-        ("Document Information Retrieval Bot", "Debarghya Maity", "http://13.232.253.41:8005/"),
+        ("Document Information Retrieval Bot", "Debarghya Maity", "http://alb-dev-cli-2013930021.ap-south-1.elb.amazonaws.com/"),
         ("Document Sentiment Insights", "Debarghya Maity", "http://13.232.253.41:8002/"),
         ("Document Intelligence Bot", "Kritadhi Maity", "http://52.66.10.81:8502/"),
         ("Organizational Structure Construction", "Debarghya Maity", "http://13.232.253.41:8001"),
@@ -242,7 +242,7 @@ def main():
         
         {
             "name": "Document Information Retrieval Bot",
-            "deployment_links": "http://13.232.253.41:8005/",
+            "deployment_links": "http://alb-dev-cli-2013930021.ap-south-1.elb.amazonaws.com/",
             "creator": "Debarghya Maity",
             "status": "Running",
             "code_repo_link": "n/a",
